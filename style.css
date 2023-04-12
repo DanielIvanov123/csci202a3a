@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ddd;
+}
+
+.canvas {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  animation: rotateCanvas 10s linear infinite;
+}
+
+.square {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+}
+
+.square:hover {
+  transform: scale(1.1);
+}
+
+.red {
+  background-color: #d62728;
+  clip-path: polygon(40% 60%, 100% 0, 100% 100%, 80% 100%);
+}
+
+.yellow {
+  background-color: #ffdb58;
+  clip-path: polygon(0 60%, 0% 100%, 25% 79%);
+  right: 0;
+}
+
+.black {
+  background-color: #000000;
+  clip-path: polygon(0 30%, 30% 0, 40% 0, 40% 100%, 0 60%);
+  bottom: 0;
+}
+
+.grey {
+  background-color: #5A5A5A;
+  clip-path: polygon(60% 0, 80% 20%, 100% 0);
+  right: 0;
+  bottom: 0;
+}
+
+.grey2 {
+  background-color: #5A5A5A;
+  clip-path: polygon(40% 100%, 80% 100%, 40% 60%);
+  right: 0;
+  bottom: 0;
+}
+
+.grey3 {
+  background-color: #5A5A5A;
+  clip-path: polygon(30% 0, 0 30%, 0 0);
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes rotateCanvas {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
